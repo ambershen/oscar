@@ -1,7 +1,51 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
+body{
+	background-color: $mistyRose;
+}
+header{
+	background: $nadeshikoPink;
+	border-bottom: 1px solid $nadeshikoPink;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	img{
+		float: left;
+		position: absolute;
+		height: 64px;
+		weight: 64px;
+	}
+	.nav-menu{
+		float: right;
+		margin-right: 20px;
+		li{
+			display: inline block;
+			float: left;
+			margin-left: 20px;
+		}
+	}
+	a{
+		color: $black;
+		text-decoration: none;
+		font-family: $font-primary;
+		text-transform: lowercase;
+		font-size: 20px;
 
+	}
+}
+/*Sizes for the bigger menu*/
+header.large{
+	height: 70px;
+	li{
+		margin-top: 20px;
+	}
+}
+
+#introduction{
+	background-image: url('./media/background_img.jpg');
+	background-position: center;
+}
 h1 {
   font-size: 2.2rem;
   color: lighten($orange, 25);
