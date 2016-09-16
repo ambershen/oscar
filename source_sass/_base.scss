@@ -1,12 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-body{
-	background-color: $mistyRose;
-}
 header{
-	background: $nadeshikoPink;
-	border-bottom: 1px solid $nadeshikoPink;
+	background: #000000;
+	border-bottom: 1px solid #000000;
 	width: 100%;
 	position: fixed;
 	z-index: 10;
@@ -26,10 +23,9 @@ header{
 		}
 	}
 	a{
-		color: $black;
+		color: #ffffff;
 		text-decoration: none;
 		font-family: $font-primary;
-		text-transform: lowercase;
 		font-size: 20px;
 
 	}
@@ -41,14 +37,80 @@ header.large{
 		margin-top: 20px;
 	}
 }
+section{
+	width: 100%;
+	position: relative;
 
-#introduction{
-	background-image: url('./media/background_img.jpg');
-	background-position: center;
 }
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+#home{
+	top: 70px;
+	height: 805.5px;
+	font-family: $font-secondary;
+	h1{
+  		font-size: 32px;
+  		color: #ffffff;
+  		position: absolute;
+  		top:40%;
+	}
+	h2{
+		font-size: 64px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: #ffffff;
+	}
+	video{
+		width: 100%;
+	}
+}
+#trends{
+	top: 15%;
+	height: 1200px;
+	position: relative;
+	
+	h1{
+		font-size: 32px;
+		font-family: $font-secondary;
+		color: #ffffff;
+	}
+	p{
+		font-family: $font-primary;
+		font-size: 24px;
+		margin-top: 5px;
+	}
+	#multiColumn{
+		background-image: url("/media/background_stage.jpg");
+		height: 600px;
+		position: relative;
+		margin-top: 80px;
+		ul{
+			li{
+				position: relative;
+				width: 33%;
+				display: inline-block;
+				vertical-align: middle;
+				img{
+					display: block;
+					margin: 0 auto;
+				}
+				p{
+					text-align: center;
+				}
+				span{
+					margin-top: 10px;
+					width: 40%;
+				}
+			}
+		}
+	}
+	#pantone-modal{
+		li{
+			position: relative;
+			display: inline-block;
+			width: 20%;
+			vertical-align: middle;
+		}
+	}
 }
 
 .test {

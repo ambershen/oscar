@@ -9,18 +9,77 @@
 <body>
   <header class="large">
     <nav>
-      <img src="./media/favicon.png">
       <ul class="nav-menu">
-        <li><a href="#">Monologue</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#trends">Trends</a></li>
+        <li><a href="#snapshot">Snapshot</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section id="introduction">
-    <img src="./media/introduction.png">
+  <section id="home">
+   <h1>ultimate guide to the latest</h1>
+  <h2>NYFW</h2>
+  <video autoplay="true">
+  <source src="/media/runway_video.mp4" type="video/mp4">
+  </video>
 </section>
+<section id="trends">
+  <div class="container" id="multiColumn">
+    <h1>Keywords to know for Spring 2017</h1>
+    <p>A reminiscence of your favorite '80s dance flick</p>
+    <ul class="multi-column">
+      <li>
+        <img src="/media/ruffle.png">
+        <p>Ruffles</p>
+        <span>A ruffle here, a ruffle there: It's the frilly season. From Jill Stuart to Marissa Webb, this bold, classic and uber-girly detail made a huge statement on the runway.</span>
+      </li>
+      <li>
+      <img src="/media/shirting.png">
+      <p>Deconstructed Shirting</p>
+      <span>Off-shoulder is still going strong. Carolina Herrera pushed down the collars of her shirts dress to expose the clavicle, while Alexander Wang wrapper his cropped shirts down the runway with boxer shorts.</span>
+      </li>
+      <li>
+      <img src="/media/stripe.png">
+      <p>Vertical Stripe</p>
+      <span>Vertical stripe matches up with a modern and edge look. Victoria Beckham, Philip Lim and others showed pants, shirts and dresses in vertical stripes.</span> 
+      </li>
+    </ul>
+  </div>
+  <div class="container" id="pantone-modal">
+  <!--photo credit to http://www.refinery29.com/2016/02/102969/pantone-fall-2016-color-report#slide-21-->
+    <h1>Pantone colors of the Season</h1>
+    <ul class="color-style" id="firstLineStyle" >
+      <li><img src="/media/modals/modal_riverside.jpg"></li>
+      <li><img src="/media/modals/modal_aurora_red.jpg"></li>
+      <li><img src="/media/modals/modal_lush_meadow.jpg"></li>
+      <li><img src="/media/modals/modal_airy_blue.jpg"></li>
+    </ul>
+    <ul class="color-style" id="secondLineStyle">
+      <li><img src="/media/modals/modal_potter_clay.jpg"></li>
+      <li><img src="/media/modals/modal_sharkskin.jpg"></li>
+      <li><img src="/media/modals/modal_warm_taupe.jpg"></li>
+      <li><img src="/media/modals/modal_spicy_mustard.jpg"></li>
+    </ul>
+  </div>
+</section>
+<section id="snapshot">
+  <h1>From Runway to Street Style</h1>
+  <div class="container" id="carousel">
+    <button class="fa fa-chevron-left" id="leftBtn"></button>
+    <button class="fa fa-chevron-right" id="rightBtn"></button>
+    <div class="snapshot-carousel">
+      <img class="carousel-image" src="/media/streetstyle_1.jpeg">
+      <img class="carousel-image" src="/media/streetstyle_2.jpeg">
+      <img class="carousel-image" src="/media/streetstyle_3.jpeg">
+      <img class="carousel-image" src="/media/streetstyle_4.jpeg">
+      <img class="carousel-image" src="/media/streetstyle_5.jpeg">
+    </div>
+  </div>
+</section>
+<footer id="footer">
 
+</footer>
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
