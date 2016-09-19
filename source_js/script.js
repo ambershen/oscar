@@ -54,5 +54,52 @@ $(document).ready(function(){
 		$('#navContact').addClass("nav-curr");
 	}
 
-});
+	});
+	/* Add smooth scrolling to nav menu */
+	$('a').on("click", function(event){
+		if(this.hash !== ""){
+			event.preventDefault();
+			var hash = this.hash;
+			console.log(hash);
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top}, 800, function(){
+				window.location.hash = hash;
+			});
+		}
+	});
+	/* Trigger Modals when clicked */
+	$('#riverside').on("click", function(){
+		$('#riversideModal').show();
+	});
+	$('#auroraRed').on("click", function(){
+		$('#auroraRedModal').show();
+	});
+	$('#lushMeadow').on("click", function(){
+		$('#lushMeadowModal').show();
+	});
+	$('#airyBlue').on("click", function(){
+		$('#airyBlueModal').show();
+	});
+	$('#potterClay').on("click", function(){
+		$('#potterClayModal').show();
+	});
+	$('#sharkskin').on("click", function(){
+		$('#sharkskinModal').show();
+	});
+	$('#warmTaupe').on("click", function(){
+		$('#warmTaupeModal').show();
+	});
+	$('#spicyMustard').on("click", function(){
+		$('#spicyMustardModal').show();
+	});
+	/* Close the modal when user clicks on CLOSE button */
+	$('.close-btn').on("click", function(){
+		$(this).closest(".modal").hide();
+	});
+	/* Close the modal when user clicks anywhere outside the modal box */
+	$(window).on("click",function(event){
+		if(event.target == $("#riversideModal")){
+			$("#riversideModal").hide();
+		}
+	});
 });
