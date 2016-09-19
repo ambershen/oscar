@@ -7,21 +7,22 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <header class="large">
+  <header class="small">
     <nav>
+      <h1>TheFashionMemo</h1>
       <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#trends">Trends</a></li>
-        <li><a href="#snapshot">Snapshot</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="nav-item nav-curr" id="navHome"><a href="#home">Home</a></li>
+        <li class="nav-item" id="navTrends"><a href="#trends">Trends</a></li>
+        <li class="nav-item" id="navSnapshot"><a href="#snapshot">Snapshot</a></li>
+        <li class="nav-item" id="navContact"><a href="#contact">#Follow</a></li>
       </ul>
     </nav>
   </header>
-  <section id="home">
-   <h1>ultimate guide to the latest</h1>
-  <h2>NYFW</h2>
-  <video autoplay="true">
-  <source src="/media/runway_video.mp4" type="video/mp4">
+<section id="home">
+  <h1>Ultimate guide to the latest</h1>
+  <h2>New York Fashion Week</h2>
+  <video loop="loop" muted="true" autoplay="true">
+    <source src="/media/runway_video.mp4" type="video/mp4">
   </video>
 </section>
 <section id="trends">
@@ -46,7 +47,7 @@
       </li>
     </ul>
   </div>
-  <div class="container" id="pantone-modal">
+  <div class="container" id="styleCard">
   <!--photo credit to http://www.refinery29.com/2016/02/102969/pantone-fall-2016-color-report#slide-21-->
     <h1>Pantone colors of the Season</h1>
     <ul class="color-style" id="firstLineStyle" >
@@ -66,19 +67,46 @@
 <section id="snapshot">
   <h1>From Runway to Street Style</h1>
   <div class="container" id="carousel">
-    <button class="fa fa-chevron-left" id="leftBtn"></button>
-    <button class="fa fa-chevron-right" id="rightBtn"></button>
+    <a class="prev" id="leftBtn" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" id="rightBtn" onclick="plusSlides(1)">&#10095;</a>
     <div class="snapshot-carousel">
-      <img class="carousel-image" src="/media/streetstyle_1.jpeg">
-      <img class="carousel-image" src="/media/streetstyle_2.jpeg">
-      <img class="carousel-image" src="/media/streetstyle_3.jpeg">
-      <img class="carousel-image" src="/media/streetstyle_4.jpeg">
-      <img class="carousel-image" src="/media/streetstyle_5.jpeg">
+      <img class="carousel-image" src="/media/carousel/runwaystyle9.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle11.jpg">
+      <img class="carousel-image" src="/media/carousel/runwaystyle5.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle5.jpeg">
+      <img class="carousel-image" src="/media/carousel/runwaystyle1.jpg">
+      <img class="carousel-image" src="/media/carousel/runwaystyle10.jpg">
+      <img class="carousel-image" src="/media/carousel/runwaystyle3.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle10.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle15.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle16.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle17.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle18.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle19.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle21.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle22.jpg">
+      <img class="carousel-image" src="/media/carousel/streetstyle6.jpeg">
+      <img class="carousel-image" src="/media/carousel/streetstyle8.jpeg">
     </div>
   </div>
 </section>
-<footer id="footer">
-
+<footer id="contact">
+    <ul class="social-media-icons">
+      <li><a href="https://www.facebook.com/ambershen955"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+      <li><a href="https://twitter.com/hanzibiubiubiu"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.instagram.com/ambersss22/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/hanzi-amber-shen-78273232?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+    </ul>
+    <div class="subscription">
+        <form class="email-input">
+          <label for="email">Subscribe to updates</label>
+          <input type="email" name="email" placeholder="Enter your e-mail">
+          <input type="submit" value="GO">
+        </form>
+    </div>
+    <div class="copyright">
+      <span>Hanzi Shen &copy; 2016 All Rights Reserved</span>
+    </div>
 </footer>
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>

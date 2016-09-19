@@ -1,46 +1,65 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import "mixins";
 
 header{
-	background: #000000;
-	border-bottom: 1px solid #000000;
+	background: $white;
+	/*border-bottom: 1px solid #ebebeb;*/
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	img{
-		float: left;
+	/*Title on top left corner*/
+	h1{
+		left: 1em;
 		position: absolute;
-		height: 64px;
-		weight: 64px;
+		font-family: $font-secondary;
+		font-style: italic;
 	}
 	.nav-menu{
 		float: right;
-		margin-right: 20px;
-		li{
+		margin-left: 20px;
+		margin-right: 10px;
+		.nav-item{
 			display: inline block;
 			float: left;
 			margin-left: 20px;
+			a{
+				color: #000000;
+				text-decoration: none;
+				font-family: $font-primary;
+				font-size: $title-size;
+				font-weight: lighter;
+				cursor: pointer;
+				&:hover, &:focus{
+					border-bottom: 4px solid $taupe;
+				}
+			}
+		}
+		.nav-curr{
+			a{
+				color: $dustyCedar;
+			}
 		}
 	}
-	a{
-		color: #ffffff;
-		text-decoration: none;
-		font-family: $font-primary;
-		font-size: 20px;
+	/*Sizes for the bigger menu*/
+	&.large{
+		height: 60px;
+		line-height: 60px;
+	}
+	/*Sizes for the smaller menu when scrolling down*/
+	&.small{
+		height: 40px;
+		line-height: 40px;
+	}
+}
 
-	}
-}
-/*Sizes for the bigger menu*/
-header.large{
-	height: 70px;
-	li{
-		margin-top: 20px;
-	}
-}
 section{
 	width: 100%;
 	position: relative;
 
+}
+h1{
+	font-size: 32px;
 }
 #home{
 	top: 70px;
@@ -50,14 +69,17 @@ section{
   		font-size: 32px;
   		color: #ffffff;
   		position: absolute;
-  		top:40%;
+  		top:45%;
+  		left: 10%;
 	}
 	h2{
 		font-size: 64px;
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left:20%;
+		text-align: center;
 		color: #ffffff;
+		font-style: italic;
 	}
 	video{
 		width: 100%;
@@ -65,13 +87,11 @@ section{
 }
 #trends{
 	top: 15%;
-	height: 1200px;
+	height: 1500px;
 	position: relative;
 	
 	h1{
-		font-size: 32px;
-		font-family: $font-secondary;
-		color: #ffffff;
+		@include subtitle();
 	}
 	p{
 		font-family: $font-primary;
@@ -79,10 +99,10 @@ section{
 		margin-top: 5px;
 	}
 	#multiColumn{
-		background-image: url("/media/background_stage.jpg");
+		@include background("/media/nyc_background.jpeg");
 		height: 600px;
 		position: relative;
-		margin-top: 80px;
+		margin-top: 20px;
 		ul{
 			li{
 				position: relative;
@@ -103,17 +123,93 @@ section{
 			}
 		}
 	}
-	#pantone-modal{
+	#styleCard{
+		h1{
+			@include subtitle();
+		}
+		ul{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
 		li{
 			position: relative;
 			display: inline-block;
 			width: 20%;
 			vertical-align: middle;
+			margin-left: 30px;
 		}
 	}
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+#snapshot{
+	h1{
+		@inlcude subtitile();
+	}
 }
+
+#carousel{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 15px;
+	display: table;
+	img{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	a{
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		font-size: 28px;
+	}
+	.next{
+		right: 5%;
+	}
+	.prev{
+		left: 5%;
+	}
+}
+
+footer{
+	background-color: $taupe;
+	opacity: 0.8;
+	height: 173px;
+	bottom: 0;
+	width: 100%;
+	postion: relative;
+	text-align: center;
+	.social-media-icons{
+		position: absolute;
+		padding-top: 80px;
+		width: 50%;
+		li{
+			display: inline-block;
+			padding: 10px 23px;
+			a{
+				color: #000000;
+				text-decoration: none;
+				font-size: 20px;
+
+			}
+		}
+
+	}
+	.subscription{
+		position: absolute;
+		padding-top: 80px;
+		width: 50%;
+		right: 0;
+		display: inline-block;
+		label{
+			font-size: 17px;
+			padding-right: 15px;
+
+		}
+	}
+	.copyright{
+		position: absolute;
+		padding-top: 150px;
+		width: 50%;
+	}
+}
+

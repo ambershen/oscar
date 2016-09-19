@@ -1,0 +1,19 @@
+@import "variables";
+
+@mixin background($url){
+	background-image: url($url);
+	background-size: cover;
+	background-postion: center center;
+	background-attachment: fixed;
+	background-repeat: no repeat;
+	z-index: 1;
+}
+
+@mixin subtitle(){
+	font-size: 32px;
+	color: #000000;
+	line-height: 60px;
+	font-family: $font-secondary;
+	font-style: italic; 
+	margin-left: 1em;
+}
