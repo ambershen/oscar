@@ -245,14 +245,16 @@ footer{
 				font-size: 20px;
 				@include transition(all .8s ease-in-out);
 				cursor: pointer;
-				&:hover{
-					cursor: pointer;
-					@include transform(rotate(30deg));
+				.social-media-icon{
+					@include transition(all .5s ease-in-out);
+					&:hover{
+						@include transform(rotate(45deg));
+					}				
 				}
-			}
 		}
-
 	}
+
+}
 	.subscription{
 		position: absolute;
 		padding-top: 80px;
@@ -286,6 +288,7 @@ footer{
 		position: absolute;
 		padding-top: 150px;
 		width: 50%;
+		right: 0;
 	}
 }
 
