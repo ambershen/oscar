@@ -1,5 +1,4 @@
-/*http://www.w3schools.com/howto/howto_js_slideshow.asp */
-
+/* Activate the carousel */
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -95,11 +94,5 @@ $(document).ready(function(){
 	/* Close the modal when user clicks on CLOSE button */
 	$('.close-btn').on("click", function(){
 		$(this).closest(".modal").hide();
-	});
-	/* Close the modal when user clicks anywhere outside the modal box */
-	$(window).on("click",function(event){
-		if(event.target == $("#riversideModal")){
-			$("#riversideModal").hide();
-		}
 	});
 });

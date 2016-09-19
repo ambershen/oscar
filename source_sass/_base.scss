@@ -6,7 +6,7 @@ header{
 	background: $white;
 	/*border-bottom: 1px solid #ebebeb;*/
 	width: 100%;
-	position: fixed;
+	position: fixed; /* sticky header on top */
 	z-index: 10;
 	/*Title on top left corner*/
 	h1{
@@ -96,8 +96,9 @@ section{
 		font-style: italic;
 		font-size: 20px;
 		line-height: 40px;
-		margin-left: 2.5em;
+		text-align: center;
 		color: $dustyCedar;
+
 	}
 	#multiColumn{
 		@include background("../media/nyc_background.jpeg");
@@ -151,6 +152,8 @@ section{
 			width: 20%;
 			vertical-align: middle;
 			margin-left: 30px;
+			border: 1px solid;
+			border-style: outset;
 			img{
 				@include transition(all .2s ease-in-out);
 				&:hover, &:focus{
@@ -173,13 +176,12 @@ section{
 	padding-top: 100px;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
-	/*outline: 9999px solid rgba(0,0,0,0.5); /*dim the background*/
 	.modal-content{
 		background-color: #fefefe;
 		margin: auto;
 		padding: 20px;
 		border: 1px solid #888;
-		width: 35%;
+		width: 25%;
 		.close-btn{
 			color: #aaaaaa;
 			float: right;
@@ -203,7 +205,7 @@ section{
 		display: table;
 		img{
 			display: table-cell;
-			vertical-align: middle;
+			vertical-align: middle; /*vertically and horizontally center the image carousel */
 			max-width: 100%;
 			height: auto;
 		}
@@ -251,10 +253,9 @@ footer{
 						@include transform(rotate(45deg));
 					}				
 				}
+			}
 		}
 	}
-
-}
 	.subscription{
 		position: absolute;
 		padding-top: 80px;
