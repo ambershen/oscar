@@ -100,7 +100,7 @@ section{
 		color: $dustyCedar;
 	}
 	#multiColumn{
-		@include background("/media/nyc_background.jpeg");
+		@include background("../media/nyc_background.jpeg");
 		height: 600px;
 		position: relative;
 		margin-top: 20px;
