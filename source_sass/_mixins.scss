@@ -9,11 +9,24 @@
 	z-index: 1;
 }
 
-@mixin subtitle(){
-	font-size: 32px;
+@mixin title(){
+	font-size: 36px;
 	color: #000000;
 	line-height: 60px;
 	font-family: $font-secondary;
-	font-style: italic; 
 	margin-left: 1em;
+	text-align: center;
+}
+
+@mixin transition($transition){
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+}
+
+@mixin transform($transform){
+	transform: $transform;
+	-ms-transform: $transform;
+	-webkit-transform: $transform;
 }
